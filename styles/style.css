@@ -24,19 +24,49 @@ h1 img {
   height: auto;
 }
 
-#fact {
-  border-style: solid;
-  border-width: 1px;
-  font-size: 1.2rem;
+#fact-container {
+  position: relative;
   background: #f2dcacbb;
-  padding: 1rem;
+  border: 1px solid #000000;
   border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.24);
   min-height: 80px;
   margin-bottom: 1rem;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.24);
+
+  /* Centralizar vertical e horizontalmente o texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-button {
+
+#fact {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+#speakFactBtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #272726;
+  opacity: 0.7;
+  transition: transform 0.2s, color 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+
+#speakFactBtn:hover {
+  transform: scale(1.2);
+}
+
+button#newFactBtn {
   align-self: center;
   background-color: #e6bbc2b0;
   background-image: none;
@@ -65,16 +95,14 @@ button {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-
 }
 
-button:hover {
+button#newFactBtn:hover {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
-
 }
 
-button:focus {
+button#newFactBtn:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 
